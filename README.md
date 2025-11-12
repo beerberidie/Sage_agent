@@ -1,8 +1,12 @@
 # Sage Business Cloud Accounting Integration - Project Overview
 
-**Version:** 1.0  
-**Date:** 2025-10-10  
-**Status:** Ready for Implementation  
+![CI/CD Pipeline](https://github.com/beerberidie/Sage_agent/workflows/CI/CD%20Pipeline/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11-blue)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+**Version:** 1.0
+**Date:** 2025-10-10
+**Status:** Ready for Implementation
 **Target Region:** South Africa
 
 ---
