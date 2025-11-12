@@ -9,9 +9,11 @@ from datetime import datetime, timedelta
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
+
 def _tenant_id() -> str:
     # For starter, a fixed demo tenant. Replace with your auth system.
     return "demo-tenant"
+
 
 @router.get("/start")
 async def auth_start():
@@ -28,8 +30,11 @@ async def auth_start():
     }
     return RedirectResponse(f"{authorize_url}?{urlencode(params)}")
 
+
 @router.get("/callback")
-async def auth_callback(request: Request, code: str, state: str, session=Depends(get_session)):
+async def auth_callback(
+    request: Request, code: str, state: str, session=Depends(get_session)
+):
     s = get_settings()
     token_url = "https://www.sage.com/oauth/token"  # Placeholder; update to correct token endpoint
     data = {

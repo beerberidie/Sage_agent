@@ -2,6 +2,7 @@ from pydantic_settings import BaseSettings
 from pydantic import AnyUrl
 from functools import lru_cache
 
+
 class Settings(BaseSettings):
     app_env: str = "dev"
     app_secret: str = "dev-secret"
@@ -17,6 +18,7 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = ".env"
+
 
 @lru_cache
 def get_settings() -> Settings:
